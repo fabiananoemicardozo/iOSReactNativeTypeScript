@@ -1,0 +1,62 @@
+App iOS React Native
+
+The project is created based on the following versions and dependencies:
+
+node v16.14.0  
+react-native init App --template react-native-template-typescript 
+react-native-maps 
+react-native-vector-icons
+@react-navigation/native
+react-native-screens react-native-safe-area-context
+@react-navigation/native-stack
+@react-navigation/bottom-tabs
+@react-native-async-storage/async-storage 
+
+Documentation:
+
+https://reactnative.dev/
+https://github.com/react-native-maps/react-native-maps
+https://github.com/oblador/react-native-vector-icons
+https://reactnavigation.org/
+https://github.com/react-native-async-storage/async-storage
+
+File structure:
+
+App/
+App.tsx
+src/
+    assets/
+        images/
+            datterino.jpg
+            logo.png
+        data/
+            products.json
+        types/
+            type.tsx
+        interfaces/
+            interface.tsx
+        routes/
+            stackNavigation.tsx
+            tabNavigation.tsx
+        screens/
+            HomeScreen.tsx
+            DetailsScreen.tsx
+            FavoriteScreen.tsx
+            MapScreen.tsx
+
+
+The main file of the application is App.tsx, here it is called TabNavigation.tsx.
+In TabNavigation.tsx you will find the app's button navigation that can be seen at the bottom level when emulating the app.
+
+
+In the same file where TabNavigation.tsx is, there is also StackNavigation.tsx, which supports navigation between routes.
+
+The application has four screens: Home, Details, Favorite and Map.
+
+HomeScreen.tsx: contains a list of products, from each product you can access the detail.
+
+DetailsScreen.tsx: contains the product details, a button to buy and an icon to add to favorites and store them in asyncSrorage, for these functions use useState, useEffect, Async Storage
+
+MapScreen.tsx_: contains a map with different points of sale identified with an icon, an input where the user enters their address and the distance between the user's address and the nearest point of sale is measured (I could not finish this function).
+
+favoriteScreen.tsx: contiene una función para poder traer a su pantalla los favoritos que se indican en DetailsScreen.tsx (no pude finalizar esta función) 
